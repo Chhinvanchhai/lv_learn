@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin',
             'password' => 'password',
         ]);
+        \App\Models\User::factory(1000)->create();
         $this->call([
             RoleSeeder::class,
             PermissionSeeder::class
