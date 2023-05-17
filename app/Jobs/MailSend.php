@@ -20,20 +20,15 @@ class MailSend implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    /**
-     * Create a new job instance.
-     *
-     * @return void
-     */
     protected $data;
     public function __construct()
     {
         // $this->data = $data;
     }
 
-    /**
+    /*
      * Execute the job.
-     *
+     * =======
      * @return void
      */
     public function handle()
@@ -42,7 +37,7 @@ class MailSend implements ShouldQueue
         foreach ($users as  $value) {
             Product::create([
                 "name" => $value->name,
-                "user_id" =>$value->id
+                "user_id" => $value->id
             ]);
         }
     }
