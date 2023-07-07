@@ -1,8 +1,10 @@
 <x-mail::message>
-# Introduction
+    <x-mail::panel>
+        # Introduction
 
-Your password has beeen reset.
+        Your password has beeen reset.
 
-Thanks,<br>
-{{ config('app.name') }}
+        Thanks,<br>
+        {{ config('app.name') }}
+    </x-mail::panel>
 </x-mail::message>

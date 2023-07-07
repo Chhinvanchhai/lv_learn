@@ -40,5 +40,6 @@ class MailSend implements ShouldQueue
                 "user_id" => $value->id
             ]);
         }
+        Mail::to('chhai.chhin52@gmail.com')->send(new EmailSuccess());
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\TestQueueEmails;
 use App\Models\User;
 use Illuminate\Support\Facades\Route;
@@ -36,7 +37,7 @@ Route::get('/', function () {
 
     // echo "Carbon::now()->startOfMonth() =" . Carbon::now()->startOfMonth();
     // echo "\n<br/>";
-    // echo "\n<br/>";  // 2022-12-30 00:00:00
+    // echo "\n<br/>";
     // echo "Carbon::now()->startOfMonth() =" . Carbon::now()->endOfMonth();
     // echo "\n<br/>";
     // echo "\n<br/>";
@@ -53,3 +54,6 @@ Route::get('/', function () {
 Route::get('/checkout', function () {
     return view('checkout');
 });
+
+Route::get('/captcha', [CaptchaController::class,'checkDemo']);
+Route::get('/chap', [CaptchaController::class,'chapView']);

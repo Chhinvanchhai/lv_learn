@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\PaymentGateWays;
 use App\Http\Controllers\FileControler;
 use App\Jobs\MailSend;
@@ -27,7 +28,6 @@ Route::group(['middleware' => ['auth:sanctum', 'permission']], function () {
 Route::controller(AuthController::class)->group(function () {
     Route::post('/forgot-password', 'handleForgotPassword')->middleware('guest')->name('password.request');
     Route::post('/password/reset/{token}', 'resetPassword')->middleware('guest')->name('password.request');
-
 });
 // file
 Route::controller(FileControler::class)->group(function () {
@@ -42,4 +42,11 @@ Route::controller(PaymentGateWays::class)->group(function () {
     Route::post('/unipay', 'UnionPay');
     Route::post('/check_user_api', 'CreateUser');
 
+});
+
+
+
+//  payment gateway
+Route::controller(CaptchaController::class)->group(function () {
+    Route::post('captcha', 'Captcha');
 });

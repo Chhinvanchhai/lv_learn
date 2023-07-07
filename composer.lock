@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fcc41e086b872386eceb4fa51855ccdb",
+    "content-hash": "974559f38985e96129f827d45fca7477",
     "packages": [
         {
             "name": "brick/math",
@@ -6330,6 +6330,57 @@
                 "source": "https://github.com/webmozarts/assert/tree/1.11.0"
             },
             "time": "2022-06-03T18:03:27+00:00"
+        },
+        {
+            "name": "yuanlj-tea/slide-captcha",
+            "version": "v1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yuanlj-tea/slide-captcha.git",
+                "reference": "f1b8362b7abb31464c891116d4669eb12972d699"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yuanlj-tea/slide-captcha/zipball/f1b8362b7abb31464c891116d4669eb12972d699",
+                "reference": "f1b8362b7abb31464c891116d4669eb12972d699",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "ext-gd": "*",
+                "php": ">=7.1"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Tncode\\SlideCaptchaServiceProvider"
+                    ],
+                    "aliases": {
+                        "SlideCode": "Tncode\\SlideCaptchaFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Tncode\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "yuanlj",
+                    "email": "1107806823@qq.com"
+                }
+            ],
+            "description": "滑动验证码",
+            "support": {
+                "source": "https://github.com/yuanlj-tea/slide-captcha/tree/v1.0.3"
+            },
+            "time": "2021-11-29T11:07:46+00:00"
         }
     ],
     "packages-dev": [

@@ -12,10 +12,6 @@ class TestQueueEmails extends Controller
     {
         $emailJobs = new MailSend();
         $this->dispatch($emailJobs);
-        Product::create([
-            "name" => "home",
-            "user_id" => 1
-        ]);
         return "sucessfully sent test emails";
     }
 }
