@@ -57,3 +57,5 @@ Route::get('/checkout', function () {
 
 Route::get('/captcha', [CaptchaController::class,'checkDemo']);
 Route::get('/chap', [CaptchaController::class,'chapView']);
+
+

@@ -4,6 +4,8 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CaptchaController;
 use App\Http\Controllers\PaymentGateWays;
 use App\Http\Controllers\FileControler;
+use App\Http\Controllers\ImageController;
+use App\Http\Controllers\SecurityController;
 use App\Jobs\MailSend;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -49,4 +51,15 @@ Route::controller(PaymentGateWays::class)->group(function () {
 //  payment gateway
 Route::controller(CaptchaController::class)->group(function () {
     Route::post('captcha', 'Captcha');
+});
+
+
+Route::controller(SecurityController::class)->group(function () {
+    Route::get("check", function (Request $request){
+        return "check security";
+    });
+});
+
+Route::controller(ImageController::class)->group(function (){
+    Route::post("/image","updateImage");
 });
